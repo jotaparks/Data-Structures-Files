@@ -1,0 +1,19 @@
+
+boolean insere_dir(tree pai, tipo_elem item){
+
+if (pai == NULL){
+  return FALSE;
+}
+if (pai->dir != NULL) {
+  printf("já tem filho à direita");
+  return FALSE;
+}
+
+tree no = malloc(sizeof(no));
+no->esq = NULL;
+no->dir = NULL;
+no->info = item;
+pai->dir = no;
+
+return TRUE;
+}
